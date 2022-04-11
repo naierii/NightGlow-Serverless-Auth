@@ -6,7 +6,10 @@ import goodbye from '@lambdas/goodbye';
 const serverlessConfiguration: AWS = {
   service: 'auth',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild'],
+  plugins: [
+    'serverless-esbuild',
+    "serverless-offline",
+  ],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
